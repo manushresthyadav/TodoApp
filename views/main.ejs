@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+    
+<%- include('./index.ejs') %>
+
+<div class="tasks">
+   <% if(task.length>0){ %>
+    <% task.forEach((elm)=>{ %>
+        <div class="task_inner">
+<h1><%= elm.tasks %></h1>
+<a href="/<%= elm._id %>">
+<button class="btn1"><i class="fa-solid fa-trash"></i></button>
+</a>
+</div>
+   <% }) %> 
+<% }else{ %>
+
+<h1>Hurray No task for the Day </h1>
+    <% } %>
+</div>
+
+
+  
+
+<script src="https://kit.fontawesome.com/cacef5af72.js" crossorigin="anonymous"></script>
+</body>
+</html>
